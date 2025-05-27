@@ -12,12 +12,32 @@ body {
     min-height: 100vh;
 }
 
-div.header {
+div.card {
     text-align: center;
     background-color: var(--primaria);
     color: var(--cor-light);
-    padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover; 
+    object-position: center; 
+    width: 100%;
+}
+
+.card-body {
+    background-color: var(--primaria);
+    color: var(--cor-light);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--cor-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .header_nav ul {
@@ -52,6 +72,35 @@ div.header {
     border-radius: 4px;
 }
 
+.header_nav .nav {
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.header_nav .nav-item {
+    margin: 0 0.5rem;
+}
+
+.header_nav .nav-item a {
+    color: var(--cor-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.header_nav .nav-item a:hover {
+    background-color: var(--secundaria);
+    color: var(--cor-light);
+    text-decoration: none;
+}
+
+.header_nav .nav-item a.active {
+    background-color: var(--secundaria);
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -82,6 +131,20 @@ div.footer {
     margin-top: 2rem;
 }
 
+div.home {
+    text-align: center;
+    padding: 4px;
+}
+
+ul.lista-home {
+    list-style-type: none;
+}
+
+p.texto-home {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
 @media (max-width: 768px) {
     main {
         margin: 0 1rem;
@@ -95,5 +158,27 @@ div.footer {
     .header_nav ul {
         flex-direction: column;
         gap: 1rem;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .header_nav .nav {
+        flex-direction: column;
+    }
+    
+    .header_nav .nav-item {
+        margin: 0.25rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-img-top {
+        height: 120px;
     }
 }
