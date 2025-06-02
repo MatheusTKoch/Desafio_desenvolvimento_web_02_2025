@@ -1,7 +1,11 @@
 :root {
-    --primaria: #2E5077;   
-    --secundaria: #5B8FB9;  
-    --cor-light: #F5F9FC;      
+    --primaria: #213448;   
+    --secundaria: #547792;  
+    --cor-light: #ECEFCA;      
+}
+
+body {
+    background-color: var(--secundaria) !important;
 }
 
 body {
@@ -29,13 +33,13 @@ div.card {
 
 .card-body {
     background-color: var(--primaria);
-    color: var(--cor-light);
+    color: whitesmoke;
     text-align: center;
     padding: 1.5rem;
 }
 
 .card-title {
-    color: var(--cor-light);
+    color: whitesmoke;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
 }
@@ -83,7 +87,7 @@ div.card {
 }
 
 .header_nav .nav-item a {
-    color: var(--cor-light);
+    color: whitesmoke;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -125,7 +129,7 @@ main section:first-child {
 
 div.footer {
     background-color: var(--primaria);
-    color: var(--cor-light);
+    color: whitesmoke;
     text-align: center;
     padding: 20px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
