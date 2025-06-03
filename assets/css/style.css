@@ -150,6 +150,36 @@ p.texto-home {
     margin-right: 2vw;
 }
 
+p.perguntas-home{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 24px;
+}
+div.teste-home{
+    margin-left: 7vw;
+    margin-right: 7vw;
+    background: linear-gradient(100deg, var(--primaria), var(--secundaria));
+}
+div
+.form-check{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 24px;
+ }
+
+ h1.titulo1{
+    font-size: 44px;
+ }
+
+ h2.titulo2{
+    font-size: 28px;
+ }
+
+ #btnResultado{
+    font-size: 20px;
+    border-radius: 5px;
+ }
+
 @media (max-width: 768px) {
     main {
         margin: 0 1rem;

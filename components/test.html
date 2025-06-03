@@ -4,161 +4,339 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste de Dependência Digital</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <script>
       function resultadoDoTeste() {
         let contadorDoSim = 0;
         let resposta = "";
+        const resultado = document.getElementById("resultadoDoTeste");
         for (let i = 1; i <= 10; i++) {
           const q1 = document.getElementById("q" + i + "s");
           const q11 = document.getElementById("q" + i + "n");
 
           if (q1.checked) {
             contadorDoSim++;
-          } else if (q11.checked) {
-          } else {
-            resposta = "Você esqueceu de responder uma pergunta!";
+          } else if (!q1.checked && !q11.checked) {
+            resposta = "Para ver o seu resultado não pode deixar nenhuma resposta em branco, Verifique se você deixou alguma em branco! 😀";
+            break;
           }
         }
+        resultado.style.padding = "10px";
+        resultado.style.marginTop = "20px";
+        resultado.style.borderRadius = "5px";
+        resultado.style.fontWeight = "bold";
+        resultado.style.fontSize = "30px";
+        resultado.style.color = "black";
         if (resposta != "") {
-          alert("Teste");
-          return (document.getElementById("resultadoDoTeste").innerHTML =
-            "Seu Resultado: " + resposta);
+          resultado.style.background = "red";
+          resultado.style.color = "black";
+          resultado.innerHTML = resposta;
+        } else if (contadorDoSim >= 0 && contadorDoSim <= 2) {
+          resultado.style.background = "green";
+          resultado.innerHTML =
+            "Você está conseguindo usar a tecnologia de um jeito que ajuda você a estudar e descansar. " +
+            "Continua assim, que esse equilíbrio vai fazer toda a diferença no seu aprendizado! 🤩 ";
+        } else if (contadorDoSim > 2 && contadorDoSim < 6) {
+          resultado.style.background = "yellow";
+          resultado.innerHTML =
+            "Legal que você já percebeu algumas coisas para ajustar. " +
+            "Com pequenas mudanças, tipo fazer pausas e diminuir o tempo no celular, seu foco e sua saúde só têm a ganhar. " +
+            "Tamo junto nessa! 😳⚠️ ";
         } else {
-          return (document.getElementById("resultadoDoTeste").innerHTML =
-            "Seu Resultado: " + contadorDoSim);
+          resultado.style.background = "red";
+          resultado.innerHTML =
+            "Tá sentindo que a tecnologia está tomando muito do seu tempo? Relaxa, " +
+            "isso acontece com todo mundo! O importante é perceber e começar a mudar aos poucos, mais pausas, mais tempo pra você e pra sua vida fora da tela. " +
+            "Confia que você é capaz! 🔴😬";
         }
       }
     </script>
 
-    <body>
-      <div>
-        <h1>Teste de Dependência Digital</h1>
-        <h2>Vamos fazer perguntas para Você, apenas responda Sim ou Não</h2>
-        <p>
-          Você sente ansiedade quando está sem o celular ou longe de
-          dispositivos digitais?
-        </p>
+    <div class="teste-home">
+      <h1 class="titulo1">Teste de Dependência Digital</h1>
+      <h2 class="titulo2">
+        Vamos fazer perguntas para Você, Apenas marque uma das alternativas!
+        <br />Vamos lá! 😊
+      </h2>
+      <p class="perguntas-home">
+        Você sente ansiedade quando está sem o celular ou longe de dispositivos
+        digitais?
+      </p>
 
-        <label>
-          <input type="radio" id="q1s" name="q1" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q1n" name="q1" value="Não" /> Não
-        </label>
-        <p>
-          Você costuma usar o celular mesmo quando está com outras pessoas, como
-          familiares ou amigos?
-        </p>
-
-        <label>
-          <input type="radio" id="q2s" name="q2" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q2n" name="q2" value="Não" /> Não
-        </label>
-
-        <p>
-          Você verifica notificações no celular a cada poucos minutos, mesmo sem
-          necessidade?
-        </p>
-
-        <label>
-          <input type="radio" id="q3s" name="q3" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q3n" name="q3" value="Não" /> Não
-        </label>
-
-        <p>
-          Você já perdeu horas de sono por ficar mexendo no celular ou no
-          computador?
-        </p>
-
-        <label>
-          <input type="radio" id="q4s" name="q4" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q4n" name="q4" value="Não" /> Não
-        </label>
-
-        <p>
-          Você sente dificuldade em passar um dia inteiro sem acessar redes
-          sociais?
-        </p>
-
-        <label>
-          <input type="radio" id="q5s" name="q5" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q5n" name="q5" value="Não" /> Não
-        </label>
-
-        <p>Você utiliza o celular ou outro dispositivo assim que acorda?</p>
-
-        <label>
-          <input type="radio" id="q6s" name="q6" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q6n" name="q6" value="Não" /> Não
-        </label>
-
-        <p>
-          Você já teve problemas na escola, no trabalho ou em casa por causa do
-          uso excessivo da tecnologia?
-        </p>
-
-        <label>
-          <input type="radio" id="q7s" name="q7" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q7n" name="q7" value="Não" /> Não
-        </label>
-
-        <p>
-          Você sente necessidade de responder mensagens ou verificar
-          atualizações imediatamente?
-        </p>
-
-        <label>
-          <input type="radio" id="q8s" name="q8" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q8n" name="q8" value="Não" /> Não
-        </label>
-
-        <p>
-          Você fica irritado ou inquieto quando a bateria do celular está
-          acabando?
-        </p>
-
-        <label>
-          <input type="radio" id="q9s" name="q9" value="Sim" required /> Sim
-        </label>
-        <label>
-          <input type="radio" id="q9n" name="q9" value="Não" /> Não
-        </label>
-
-        <p>
-          Você sente que passa mais tempo na frente das telas do que gostaria?
-        </p>
-
-        <label>
-          <input type="radio" id="q10s" name="q10" value="Sim" required /> Sim
-        </label>
-
-        <label>
-          <input type="radio" id="q10n" name="q10" value="Não" /> Não
-        </label>
-
-        <br />
-        <button id="btnResultado" onclick="resultadoDoTeste()">
-          Resultado
-        </button>
-        <p id="resultadoDoTeste"></p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q1s"
+          name="q1"
+          value="Sim"
+          required
+        />
+        <label class="form-check-label" for="q1s">Sim </label>
       </div>
-      <script src="teste.js"></script>
-    </body>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q1n"
+          name="q1"
+          value="Não"
+        />
+        <label class="form-check-label" for="q1n">Não</label>
+      </div>
+      <p class="perguntas-home">
+        Você costuma usar o celular mesmo quando está com outras pessoas, como
+        familiares ou amigos?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q2s"
+          name="q2"
+          value="Sim"
+          required
+        />
+        <label class="form-check-label" for="q2s">Sim</label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q2n"
+          name="q2"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q2n"> Não</label>
+      </div>
+
+      <p class="perguntas-home">
+        Você verifica notificações no celular a cada poucos minutos, mesmo sem
+        necessidade?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q3s"
+          name="q3"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q3s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q3n"
+          name="q3"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q3n"> Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você já perdeu horas de sono por ficar mexendo no celular ou no
+        computador?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q4s"
+          name="q4"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q4s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q4n"
+          name="q4"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q4n">Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você sente dificuldade em passar um dia inteiro sem acessar redes
+        sociais?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q5s"
+          name="q5"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q5s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q5n"
+          name="q5"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q5n">Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você utiliza o celular ou outro dispositivo assim que acorda?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q6s"
+          name="q6"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q6s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q6n"
+          name="q6"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q6n">Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você já teve problemas na escola, no trabalho ou em casa por causa do
+        uso excessivo da tecnologia?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q7s"
+          name="q7"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q7s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q7n"
+          name="q7"
+          value="Não"
+        />
+        <label class="form-check-label" for="q7n"> Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você sente necessidade de responder mensagens ou verificar atualizações
+        imediatamente?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q8s"
+          name="q8"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q8s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q8n"
+          name="q8"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q8n"> Não</label>
+      </div>
+
+      <p class="perguntas-home">
+        Você fica irritado ou inquieto quando a bateria do celular está
+        acabando?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q9s"
+          name="q9"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q9s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q9n"
+          name="q9"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q9n">Não </label>
+      </div>
+
+      <p class="perguntas-home">
+        Você sente que passa mais tempo na frente das telas do que gostaria?
+      </p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q10s"
+          name="q10"
+          value="Sim"
+          required
+        />
+
+        <label class="form-check-label" for="q10s">Sim </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="q10n"
+          name="q10"
+          value="Não"
+        />
+
+        <label class="form-check-label" for="q10n"> Não </label>
+      </div>
+      <br />
+      <button id="btnResultado" onclick="resultadoDoTeste()">Resultado</button>
+      <p id="resultadoDoTeste"></p>
+    </div>
+    <script src="teste.js"></script>
   </body>
 </html>
