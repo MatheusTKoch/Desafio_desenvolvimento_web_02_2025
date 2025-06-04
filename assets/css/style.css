@@ -160,8 +160,6 @@ p.perguntas-home{
     font-size: 24px;
 }
 div.teste-home{
-    margin-left: 7vw;
-    margin-right: 7vw;
     background: linear-gradient(100deg, var(--primaria), var(--secundaria));
 }
 div
@@ -173,10 +171,12 @@ div
 
  h1.titulo1{
     font-size: 44px;
+    text-align: center;
  }
 
  h2.titulo2{
     font-size: 28px;
+    text-align: center;
  }
 
  #btnResultado{
