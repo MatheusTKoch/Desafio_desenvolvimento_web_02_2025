@@ -140,6 +140,11 @@ div.home {
   color: black;
   text-align: center;
   padding: 4px;
+  font-size: larger;
+}
+
+h1.titulo-home {
+  padding: 15px;
 }
 
 ul.lista-home {
@@ -165,7 +170,8 @@ div.teste-home {
   color: black;
   text-align: center;
 }
-w div .form-check {
+
+div.form-check {
   margin-left: 2vw;
   margin-right: 2vw;
   font-size: 24px;
@@ -183,9 +189,29 @@ h2.titulo2 {
   text-align: center;
 }
 
-#btnResultado {
+#btnResultado, #mostrarMais {
   font-size: 20px;
   border-radius: 5px;
+}
+
+h1.titulo-dicas, h2.subtitulo-dicas {
+  text-align: center;
+  color: black;  
+  padding: 5px; 
+}
+
+div.conteudo-dicas {
+  text-align: center;
+  color: black;
+} 
+
+div.dica {
+  font-size: larger;
+  padding: 12px; 
+}
+
+div.mais-dicas {
+  display: none
 }
 
 @media (max-width: 768px) {

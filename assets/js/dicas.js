@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#mostrarMais").click(function () {
-    $("#maisDicas").slideToggle();
+    $("#mais-dicas").slideToggle();
 
     const textoBotao = $(this).text();
     if (textoBotao === "Mostrar mais") {
