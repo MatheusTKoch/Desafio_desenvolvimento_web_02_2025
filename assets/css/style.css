@@ -251,3 +251,63 @@ div.mais-dicas {
     height: 120px;
   }
 }
+.custom-crono {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0eaff, #f8f9ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.custom-crono .home-crono {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.custom-crono h1 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.custom-crono p.descricao {
+  color: black;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.custom-crono #timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.custom-crono .btn-group button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.custom-crono .btn-group button:hover:not(:disabled) {
+  background-color: black;
+}
+
+.custom-crono .btn-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

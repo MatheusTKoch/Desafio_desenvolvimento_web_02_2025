@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cronometro Digital</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/crono.js" defer></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <h2>Cronometro</h2>
+    <div class="custom-crono">
+        <div class="home-crono">
+            <h2>Cronômetro de contole de pausas</h2>
+            <p class="descricao">Para uma boa saúde digital, é ideal pausas entre longos períodos de estudos ou trabalho. O objetivo deste cronômetro é estimular o bom hábito de pausas, para descanso e alongamentos.
+            </p>
+            <div id="timer">20:00</div>
+            <div class="btn-group">
+                <button id="start">Iniciar</button>    
+                <button id="pause" disabled>Pausar</button>
+                <button id="reset">Resetar</button>
+            </div>
+        </div>
+    </div>
 </body>
