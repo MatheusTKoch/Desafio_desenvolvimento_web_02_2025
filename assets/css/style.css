@@ -194,7 +194,7 @@ h2.titulo2 {
   border-radius: 5px;
 }
 
-h1.titulo-dicas, h2.subtitulo-dicas {
+h1.titulo-dicas, h2.subtitulo-dicas, h2.title-crono {
   text-align: center;
   color: black;  
   padding: 5px; 
@@ -208,10 +208,6 @@ div.conteudo-dicas {
 div.dica {
   font-size: larger;
   padding: 12px; 
-}
-
-div.mais-dicas {
-  display: none
 }
 
 @media (max-width: 768px) {
